@@ -47,9 +47,9 @@ namespace TobeSandboxed
                 //    new MediaTypeWithQualityHeaderValue("application/vnd.github.v3+json"));
                 //client.DefaultRequestHeaders.Add("User-Agent", ".NET Foundation Repository Reporter");
 
-                var json = await client.GetStringAsync(
-                                        "https://api.github.com/orgs/dotnet/repos"
-                                        );
+                //var json = await client.GetStringAsync(
+                //                        "https://api.github.com/orgs/dotnet/repos"
+                //                        );
 
                 return "just json";
             }
