@@ -16,6 +16,18 @@ namespace TobeSandboxed
             Console.WriteLine("I ran in a sandbox");
         }
 
+        public class UntrustedClassTobeInstantiated
+        {
+            public UntrustedClassTobeInstantiated(string position) {
+                this.Position= position;
+            }
+            private string Position { get; set; }
+
+            public string callmelater(string callmelater)
+            {
+                return "by noon";
+            }
+        }
         public class UntrustedClass
         {
             // Pretend to be a method checking if a number is a Fibonacci
@@ -39,7 +51,7 @@ namespace TobeSandboxed
                 return "My name is " + firstname + " " + surname;
             }
 
-            public static async Task<string> makewebrequest()
+            public static string makewebrequest(string accept)
             {
                 HttpClient client = new HttpClient();
                 client.DefaultRequestHeaders.Accept.Clear();
